@@ -8,7 +8,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 const port = "8000";
-const host = "gallasdetailingbackend.onrender.com";
+const host = "gitgallasdetailingbackend.onrender.com";
 const { MongoClient, ObjectId } = require("mongodb");
 const url = process.env.databaseURL; // Updated connection string
 const dbName = "customerTickets";
@@ -112,7 +112,7 @@ app.post("/loginAdmin", async (req, res) => {
       password: values[0],
     };
     console.log(newDocument.password);
-    if (newDocument.password === "password123") {
+    if (newDocument.password === process.env.password) {
       res.status(200).send();
     } else {
       res.status(401).send({ error: "Invalid password" });
