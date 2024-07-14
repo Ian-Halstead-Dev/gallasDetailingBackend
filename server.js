@@ -8,7 +8,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 const port = "8081";
-const host = "localhost";
+const host = "https://gallasdetailingbackend.onrender.com";
 const { MongoClient, ObjectId } = require("mongodb");
 const url = process.env.databaseURL; // Updated connection string
 const dbName = "customerTickets";
