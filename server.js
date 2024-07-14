@@ -7,15 +7,15 @@ require("dotenv").config(); // Load environment variables
 app.use(cors());
 app.use(bodyParser.json());
 
-const port = "8081";
-const host = "https://gallasdetailingbackend.onrender.com";
+const port = "8000";
+const host = "gallasdetailingbackend.onrender.com";
 const { MongoClient, ObjectId } = require("mongodb");
 const url = process.env.databaseURL; // Updated connection string
 const dbName = "customerTickets";
 const client = new MongoClient(url);
 
 app.listen(port, () => {
-  console.log("App listening at http://%s:%s", host, port);
+  console.log("App listening at %s:%s", host, port);
 });
 
 // Add Ticket
