@@ -111,7 +111,6 @@ app.post("/loginAdmin", async (req, res) => {
     const newDocument = {
       password: values[0],
     };
-    console.log(newDocument.password);
     if (newDocument.password === process.env.password) {
       res.status(200).send();
     } else {
